@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Discount</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .weekly-discount-page {
+            background-color: #0a0a46;
+            padding: 0px 60px;
+            height: 620px;
+            margin-top: 30px;
+        }
+        
+        .sale-product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 240px;
+        }
+        
+        .fristline-product {
+            background-color: white;
+            width: 15%;
+            border-radius: 10px;
+            height: 340px;
+        }
+        
+        .sale-product-left {
+            width: 50%;
+            color: white;
+        }
+        
+        .sale-product-left h1 {
+            font-size: 84px;
+        }
+        
+        .sale-product-left h2 {
+            font-size: 30px;
+        }
+        
+        .sale-product-right {
+            gap: 10px;
+        }
+        
+        #headphones {
+            background-color: #fe8700;
+            color: white;
+            padding: 14px 33px;
+            border-radius: 8px;
+            border: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        
+        #laptops {
+            color: white;
+            background-color: #d23be1;
+            padding: 14px 43px;
+            border-radius: 8px;
+            border: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        
+        #mice {
+            color: white;
+            background-color: #5b7efc;
+            padding: 14px 50px;
+            border-radius: 8px;
+            border: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        
+        .sale-product-img {
+            border-radius: 10px;
+            width: 100%;
+        }
+        
+        .fristline-product h3 {
+            color: #000000;
+            font-size: 15px;
+        }
+        
+        #h3 {
+            padding-left: 20px;
+        }
+        
+        .headphones-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 60px;
+        }
+        
+        .headphones-section-title h1 {
+            color: #6172fb;
+            font-weight: 900;
+            font-size: 50px;
+        }
+        
+        .headphones-section-title h4 {
+            color: #707070;
+            font-size: 20px;
+        }
+        
+        .headphones-section-saleprice h2 {
+            color: #fe7170;
+            font-weight: 900;
+            font-size: 70px;
+        }
+        
+        .headphones-section-saleprice h4 {
+            color: #000000;
+        }
+        
+        .headphone-product h3 {
+            color: #000000;
+            font-size: 15px;
+        }
+        
+        .headphone-product p {
+            color: #979595;
+            margin: 10px 0;
+        }
+        
+        .headphone-product h4 {
+            color: #eb0101;
+            font-size: 20px;
+        }
+        
+        .headphone-produts-listing {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 60px;
+        }
+        
+        .pricing {
+            display: flex;
+        }
+        
+        .pricing h5 {
+            color: #9d9c9c;
+            text-decoration-line: line-through;
+        }
+        
+        .discountpage-button {
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: white;
+            background-color: #0f62e9;
+            font-size: 13px;
+            padding: 14px 50px;
+        }
+        
+        .secondlast-footer {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-header-container">
+        <div class="top-header">
+            <p>Use coupon code <strong>“GIFT”</strong> to get <strong>10% OFF</strong></p>
+            <div class="top-header-right">
+                <a href="#" class="free-shipping"> FREE SHIPPING & RETURNS</a>
+                <a href="http://127.0.0.1:5501/login_page.html"> MY ACCOUNT</a>
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <div class="header-box">
+            <div class="header">
+                <h1 class="logo">GRAVIA</h1>
+
+                <div class="search-bar">
+                    <div class="drop-down">
+                        <a href="#" class="dropdown-toggle">All Categories <i class="fas fa-caret-down"></i></a>
+                        <ul class="drop-down-list">
+                            <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Charger</a></li>
+                            <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Headphone</a></li>
+                            <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Keyboards</a></li>
+                            <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Laptops</a></li>
+                            <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Mice</a></li>
+                            <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Moniter</a></li>
+                            <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Samrt watch</a></li>
+                            <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Speaker</a></li>
+                        </ul>
+                    </div>
+
+                    <input type="text" placeholder="Search for Product">
+                    <div class="search-icon">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="header-menu">
+                    <a href="http://127.0.0.1:5501/login_page.html">
+                        <i class="fa-solid fa-user"></i></a>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="drop-down-second">
+                    <a href="#" class="dropdown-categories-toggle">Categories</a>
+                    <ul class="drop-down-list">
+                        <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Charger</a></li>
+                        <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Headphone</a></li>
+                        <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Keyboards</a></li>
+                        <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Laptops</a></li>
+                        <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Mice</a></li>
+                        <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Moniter</a></li>
+                        <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Samrt watch</a></li>
+                        <li><a href="http://127.0.0.1:5501/product_page.html#keyboard">Speaker</a></li>
+                    </ul>
+                </div>
+
+                <div class="categorie-buttons">
+                    <a href="http://127.0.0.1:5501/product_page.html#">
+                        <button class="buttons"><i class="fa-solid fa-universal-access"></i> Mega Sale</button>
+                    </a>
+                    <a href="http://127.0.0.1:5501/product_page.html#">
+                        <button class="buttons"><i class="fa-solid fa-gamepad"></i> Gaming</button>
+                    </a>
+                    <a href="http://127.0.0.1:5501/product_page.html#">
+                        <button class="buttons"><i class="fa-brands fa-accessible-icon"></i> Activities</button>
+                    </a>
+                    <a href="http://127.0.0.1:5501/product_page.html#">
+                        <button class="buttons"><i class="fa-solid fa-gift"></i> Gift</button>
+                    </a>
+                    <a href="http://127.0.0.1:5501/product_page.html#">
+                        <button class="buttons"><i class="fa-solid fa-music"></i> Audiophile</button>
+                    </a>
+                    <a href="http://127.0.0.1:5501/product_page.html#">
+                        <button class="buttons"><i class="fa-solid fa-face-smile"></i> Recent</button>
+                    </a>
+                    <a href="http://127.0.0.1:5501/product_page.html#">
+                        <button class="buttons"><i class="fa-solid fa-tree"></i> Popular</button>
+                    </a>
+                    <a href="http://127.0.0.1:5501/product_page.html#">
+                        <button class="buttons"><i class="fa-solid fa-circle-info"></i> Reviews</button>
+                    </a>
+                </div>
+                <div class="categories-right">
+                    <a href="#">Weekly Discount</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weekly-discount-page">
+        <div class="sale-product">
+            <div class="sale-product-left">
+                <h1>This week only</h1>
+                <h2>Don’t miss it</h2>
+            </div>
+            <div class="sale-product-right">
+                <button id="headphones"> Headphones</button>
+                <button id="laptops"> Laptops</button>
+                <button id="mice"> Mice</button>
+            </div>
+        </div>
+        <div class="produts-listing">
+
+            <div class="fristline-product">
+                <a href="http://127.0.0.1:5501/product_page.html#watch1" style="text-decoration: none; color: inherit;">
+                    <img class="sale-product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                    <h3 id="h3">Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+                </a>
+                <div id="h3">
+                    <p>Smart watches</p>
+                    <div class="pricing">
+                        <h4>$99</h4>
+                        <h5><del>$169</del></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="fristline-product">
+                <a href="http://127.0.0.1:5501/product_page.html#watch2" style="text-decoration: none; color: inherit;">
+                    <img class="sale-product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                    <h3 id="h3">Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+                </a>
+                <div id="h3">
+                    <p>Smart watches</p>
+                    <div class="pricing">
+                        <h4>$99</h4>
+                        <h5><del>$109</del></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="fristline-product">
+                <a href="http://127.0.0.1:5501/product_page.html#watch2" style="text-decoration: none; color: inherit;">
+                    <img class="sale-product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                    <h3 id="h3">Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+                </a>
+                <div id="h3">
+                    <p>Smart watches</p>
+                    <div class="pricing">
+                        <h4>$99</h4>
+                        <h5><del>$109</del></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="fristline-product">
+                <a href="http://127.0.0.1:5501/product_page.html#watch3" style="text-decoration: none; color: inherit;">
+                    <img class="sale-product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                    <h3 id="h3">Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+                </a>
+                <div id="h3">
+                    <p>Smart watches</p>
+                    <h4>$79</h4>
+                </div>
+            </div>
+            <div class="fristline-product">
+                <a href="http://127.0.0.1:5501/product_page.html#watch4" style="text-decoration: none; color: inherit;">
+                    <img class="sale-product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                    <h3 id="h3">Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+                </a>
+                <div id="h3">
+                    <p>Smart watches</p>
+                    <div class="pricing">
+                        <h4>$89</h4>
+                        <h5><del>$109</del></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="fristline-product">
+                <a href="http://127.0.0.1:5501/product_page.html#watch4" style="text-decoration: none; color: inherit;">
+                    <img class="sale-product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                    <h3 id="h3">Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+                </a>
+                <div id="h3">
+                    <p>Smart watches</p>
+                    <div class="pricing">
+                        <h4>$89</h4>
+                        <h5><del>$109</del></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="headphones-section">
+        <div class="headphones-section-title">
+            <h1>Headphones</h1>
+            <h4>Limited time offer</h4>
+        </div>
+        <div class="headphones-section-saleprice">
+            <h4>Up To</h4>
+            <h2>30%</h2>
+        </div>
+    </div>
+    <div class="headphone-produts-listing">
+
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch1" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$99</h4>
+                <h5><del>$169</del></h5>
+            </div>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch2" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$99</h4>
+                <h5><del>$109</del></h5>
+            </div>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch3" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <h4>$79</h4>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch4" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$89</h4>
+                <h5><del>$109</del></h5>
+            </div>
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch4" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$89</h4>
+                <h5><del>$109</del></h5>
+            </div>
+        </div>
+    </div>
+    <div class="headphones-section">
+        <div class="headphones-section-title">
+            <h1>Laptops</h1>
+            <h4>1-Year warranty</h4>
+        </div>
+        <div class="headphones-section-saleprice">
+            <h4>Up To</h4>
+            <h2>45%</h2>
+        </div>
+    </div>
+    <div class="headphone-produts-listing">
+
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch1" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$99</h4>
+                <h5><del>$169</del></h5>
+            </div>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch2" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$99</h4>
+                <h5><del>$109</del></h5>
+            </div>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch3" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <h4>$79</h4>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch4" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$89</h4>
+                <h5><del>$109</del></h5>
+            </div>
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch4" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$89</h4>
+                <h5><del>$109</del></h5>
+            </div>
+        </div>
+    </div>
+    <div class="headphones-section">
+        <div class="headphones-section-title">
+            <h1>Mice</h1>
+            <h4>0% Monthly Installment</h4>
+        </div>
+        <div class="headphones-section-saleprice">
+            <h4>Up To</h4>
+            <h2>20%</h2>
+        </div>
+    </div>
+    <div class="headphone-produts-listing">
+
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch1" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$99</h4>
+                <h5><del>$169</del></h5>
+            </div>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch2" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$99</h4>
+                <h5><del>$109</del></h5>
+            </div>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch3" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-3f9655ec1e.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <h4>$79</h4>
+
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch4" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$89</h4>
+                <h5><del>$109</del></h5>
+            </div>
+        </div>
+        <div class="headphone-product">
+            <a href="http://127.0.0.1:5501/product_page.html#watch4" style="text-decoration: none; color: inherit;">
+                <img class="product-img" src="./ezgif-4-2dbf98e181.jpg" alt="Aerotech SolarFlare Sports Watch (Solar Gold)">
+                <h3>Aerotech SolarFlare Sports Watch (Solar Gold)</h3>
+            </a>
+            <button class="discountpage-button"><i class="fa-solid fa-plus"></i>  ADD TO CART</button>
+            <p>Smart watches</p>
+            <div class="pricing">
+                <h4>$89</h4>
+                <h5><del>$109</del></h5>
+            </div>
+        </div>
+    </div>
+    <div class="secondlast-footer">
+        <div class="Delivery-box">
+            <div class="secondlast-footer-icons">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="secondlast-footer-desc">
+                <h3>
+                    Fast Worldwide Delivery
+                </h3>
+                <p> Fast worldwide shipping and US Warehouse free shipping</p>
+            </div>
+        </div>
+        <div class="pyament-box">
+            <div class="secondlast-footer-icons">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="secondlast-footer-desc">
+                <h3>
+                    100% Secure Payment
+                </h3>
+                <p> Checkout seamlessly with PayPal, credit cards, and Apple Pay</p>
+            </div>
+        </div>
+        <div class="refund-box">
+            <div class="secondlast-footer-icons">
+                <i class="fa-regular fa-face-smile"></i>
+            </div>
+            <div class="secondlast-footer-desc">
+                <h3>
+                    Satisfied or refunded
+                </h3>
+                <p> We offer a hassle-free 30-day return policy guarantee.</p>
+            </div>
+        </div>
+        <div class="Support-box">
+            <div class="secondlast-footer-icons">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="secondlast-footer-desc">
+                <h3>
+                    Friendly Customer Support
+                </h3>
+                <p> Experience Our World-Class Friendly Customer Support</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-desc">
+            <h1>
+                GRAVIA
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla quis libero quis semper . Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla maximus orci sed nibh suscipit aliquet.
+            </p>
+        </div>
+        <div class="footer-list-frist">
+            <h3 class="footer-list-title">
+                Support
+            </h3>
+            <div>
+                <ul class="footer-ul-li">
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Refund & Returns</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Credits</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Warranty</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-list-second">
+            <h3 class="footer-list-title">
+                Company
+            </h3>
+            <div>
+                <ul class="footer-ul-li">
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">About</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Blog</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Press</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Media kit</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footert-list">
+            <h3 class="footer-list-title">
+                Our shop
+            </h3>
+            <div>
+                <ul class="footer-ul-li">
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Shop</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Blog</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Review</a>
+                    </li>
+                    <li class="footer-ul">
+                        <a class="footer-li" href="#">Flash sale</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-left">
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="https://twitter.com" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://wa.me/yourphonenumber" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </div>
+        <div class="footer-bottom-right">
+            <p class="footer-bottom-text">© 2024 Premium WordPress Themes</p>
+        </div>
+    </div>
+</body>
+
+</html>
